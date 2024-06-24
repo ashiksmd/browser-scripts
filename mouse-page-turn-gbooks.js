@@ -1,12 +1,12 @@
 // ==UserScript==
 // @name         Mouse click page turns on play books
-// @namespace    https://books.googleusercontent.com
+// @namespace    http://userscripts.samad.one/
 // @version      0.1
 // @description  Right click for next page, left for previous
 // @author       You
 // @match        https://books.googleusercontent.com/books/reader/frame?*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=google.com
-// @downloadURL https://raw.githubusercontent.com/ashiksmd/browser-scripts/main/tmdb-copy-title.js
+// @downloadURL https://raw.githubusercontent.com/ashiksmd/browser-scripts/main/mouse-page-turn-gbooks.js
 // @grant        GM_addStyle
 // ==/UserScript==
 (function() {
@@ -77,8 +77,8 @@
     enable(); // initial state
 
     function setup() {
-        const onepage = document.querySelector("reader-main .onepage");
-        const twopage = document.querySelector("reader-main .twopage");
+        const onepage = document.querySelector("reader-app .onepage");
+        const twopage = document.querySelector("reader-app .twopage");
         const body = onepage || twopage;
         const toolbar = document.querySelector(".nav-group.end");
 
